@@ -1,11 +1,3 @@
-function brownCowFunction() {
-
-    // Select the button element
-    var button = document.getElementById("button-1")
-
-    // Select the Element to toggle
-    var brownCow = document.getElementById("brown-cow")
-
     function brownCowFunction() {
         // Select the button element
         var button = document.getElementById("button-1");
@@ -23,7 +15,8 @@ function brownCowFunction() {
             }
         });
     }
-}
+
+
     
 
 
