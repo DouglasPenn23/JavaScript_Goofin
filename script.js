@@ -22,6 +22,54 @@
       document.getElementById("demo").innerHTML = Date();
     }
     
+    
+    // Fetch Example
+    fetch('https://api.github.com/users/DouglasPenn23')
+    .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data);
+    // Process the fetched data here
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    // Handle errors if any
+  });
+
+
+
+
+// Adding elements to DOM
+
+// Select Parent Element
+const parentElement = document.getElementById('demo-append');
+
+// Select the Child element
+const childElement = document.createElement('span');
+childElement.textContent = 'This is the child element';
+
+// Append child element ot parent Element
+parentElement.appendChild(childElement)
+
+
+
+
+
+
+//   Messing around with using local storage
+// Storing data in local storage
+localStorage.setItem('key', 'value');
+
+// Retrieving data from local storage
+const data = localStorage.getItem('key');
+console.log(data); // Output: value
+
+// Removing data from local storage
+localStorage.removeItem('key');
 
 
 
