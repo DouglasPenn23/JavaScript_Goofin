@@ -44,6 +44,30 @@
 
 
 
+
+
+// Use of Async/await syntax 
+
+function getData() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve('Data retrieved successfully!');
+      }, 2000);
+    });
+  }
+  
+  async function fetchData() {
+    try {
+      const data = await getData();
+      console.log(data);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  }
+  
+  fetchData();
+  
+
 // Use of Promise
 
 // Make get request to retrieve a list of posts
